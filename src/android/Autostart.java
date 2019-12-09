@@ -93,7 +93,7 @@ public class Autostart extends CordovaPlugin {
                 context.startActivity(intent);
             }
 
-            callbackContext.success('true');   
+            callbackContext.success("true");   
             return true; 
         }
         

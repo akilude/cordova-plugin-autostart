@@ -19,6 +19,8 @@ import android.content.pm.ResolveInfo;
 import java.util.List;
 import android.content.Context;
 
+import android.widget.Toast;
+
 public class Autostart extends CordovaPlugin {
 
     /**
@@ -46,9 +48,14 @@ public class Autostart extends CordovaPlugin {
      * @return                  True if the action was valid, false if not.
      */
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        Context context = this.cordova.getActivity().getApplicationContext();
+    
 
         if(action.equalsIgnoreCase("isAutoStartRequired")){
+
+            Context context = this.cordova.getActivity().getApplicationContext();
+            
+            Toast.makeText(context, "Hello World!", Toast.LENGTH_LONG).show();
+
             String manufacturer = android.os.Build.MANUFACTURER;
 
             String autoStartRequired = "false";

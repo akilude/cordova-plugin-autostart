@@ -1,10 +1,10 @@
 var exec = require('cordova/exec');
 
 var autoStart = {
-  doesDeviceNeedAutoStart: function (successCallback, errorCallback) {
+  isAutoStartRequired: function (successCallback, errorCallback) {
     exec(successCallback, errorCallback, 'isAutoStartRequired', 'isAutoStartRequired', []);
   },
-  isAutoStartRequired: function(successCallback, errorCallback) {
+  showAutoStartSettings: function(successCallback, errorCallback) {
     exec(successCallback, errorCallback, 'showAutoStartSettings', 'showAutoStartSettings', []);
   }
 };

@@ -19,6 +19,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/Autostart.java" target-dir="src/com/everycrave/autostart" />
+        <source-file src="src/android/Autostart.java" target-dir="src/com/everycrave/autostart.Autostart" />
     </platform>
 </plugin>

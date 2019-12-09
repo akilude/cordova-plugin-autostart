@@ -49,10 +49,9 @@ public class Autostart extends CordovaPlugin {
      */
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
     
-
+        Context context = this.cordova.getActivity().getApplicationContext();
+        
         if(action.equalsIgnoreCase("isAutoStartRequired")){
-
-            Context context = this.cordova.getActivity().getApplicationContext();
             
             Toast.makeText(context, "Hello World!", Toast.LENGTH_LONG).show();
 

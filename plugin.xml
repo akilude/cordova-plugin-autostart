@@ -2,7 +2,9 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-autostart"
-    version="0.0.1">
+    version="0.0.1"
+    name="Autostart"
+    value="com.everycrave.autostart">
     <name>Auto Start</name>
     <description>Cordova AutoStart Plugin</description>
     <js-module src="www/autostart.js" name="autostart">

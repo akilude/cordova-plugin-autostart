@@ -48,17 +48,17 @@ public class Autostart extends CordovaPlugin {
         if(action.equalsIgnoreCase("isAutoStartRequired")){
             String manufacturer = android.os.Build.MANUFACTURER;
 
-            boolean autoStartRequired = false;
+            String autoStartRequired = 'false';
 
             switch (manufacturer) {
                 case "xiaomi":
-                    autoStartRequired = true;
+                    autoStartRequired = 'true';
                     break;
                 case "oppo":
-                    autoStartRequired = true;
+                    autoStartRequired = 'true';
                     break;
                 case "vivo":
-                    autoStartRequired = true;
+                    autoStartRequired = 'true';
                     break;
             }
             callbackContext.success(autoStartRequired);   

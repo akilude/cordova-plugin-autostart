@@ -17,6 +17,7 @@ import android.content.pm.PackageManager;
 import android.content.ComponentName;
 import android.content.pm.ResolveInfo;
 import java.util.List;
+import android.content.Context;
 
 public class Autostart extends CordovaPlugin {
 
@@ -45,6 +46,8 @@ public class Autostart extends CordovaPlugin {
      * @return                  True if the action was valid, false if not.
      */
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        Context context = this.cordova.getActivity().getApplicationContext();
+
         if(action.equalsIgnoreCase("isAutoStartRequired")){
             String manufacturer = android.os.Build.MANUFACTURER;
 
@@ -84,13 +87,13 @@ public class Autostart extends CordovaPlugin {
                   break;
             }
 
-            List<ResolveInfo> arrayList =  getPackageManager().queryIntentActivities(intent,PackageManager.MATCH_DEFAULT_ONLY);
+            List<ResolveInfo> arrayList =  context.getPackageManager().queryIntentActivities(intent,PackageManager.MATCH_DEFAULT_ONLY);
 
             if (arrayList.size() > 0) {
-                startActivity(intent);
+                context.startActivity(intent);
             }
 
-            callbackContext.success(true);   
+            callbackContext.success('true');   
             return true; 
         }
         

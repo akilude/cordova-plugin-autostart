@@ -1,0 +1,1 @@
+Cordova plugin for Android to send oppo, xoami, other chinese phone users to enable autostart for the app, so that they can receive push notifications when the app is closed.

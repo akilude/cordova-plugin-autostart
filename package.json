@@ -1,0 +1,27 @@
+{
+  "name": "cordova-plugin-autostart",
+  "version": "0.0.1",
+  "description": "Cordova AutoStart Plugin",
+  "cordova": {
+    "id": "cordova-plugin-autostart",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git"
+  },
+  "scripts": {
+    "test": "npm run eslint"
+  },
+  "author": "Akil",
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "devDependencies": {
+  }
+}

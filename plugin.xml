@@ -4,7 +4,7 @@
     id="cordova-plugin-autostart"
     version="0.0.1"
     name="Autostart"
-    value="com.everycrave.autostart">
+    >
     <name>Auto Start</name>
     <description>Cordova AutoStart Plugin</description>
     <js-module src="www/autostart.js" name="autostart">
@@ -15,10 +15,10 @@
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="autostart" >
-                <param name="android-package" value="com.everycrave.autostart"/>
+                <param name="android-package" value="com.everycrave.autostart.Autostart"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/Autostart.java" target-dir="src/com/everycrave/autostart.Autostart" />
+        <source-file src="src/android/Autostart.java" target-dir="src/com/everycrave/autostart" />
     </platform>
 </plugin>
